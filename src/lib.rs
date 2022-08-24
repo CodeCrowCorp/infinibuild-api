@@ -53,3 +53,11 @@ pub async fn main(req: Request, env: Env, _ctx: worker::Context) -> Result<Respo
         .run(req, env)
         .await
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        assert_eq!(2 + 2, 4);
+    }
+}
