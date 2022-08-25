@@ -1,7 +1,7 @@
 <br>
 
 <h3 align="center">
-    The serverless API for the infinibuild project
+    The serverless API for infinibuild
 </h3>
 
 <br>
