@@ -7,20 +7,25 @@
 <br>
 
 <p align="center">
-    <a href="https://github.com/CodeCrowCorp/mvp-website"><img src="https://img.shields.io/github/v/release/CodeCrowCorp/mvp-website?color=%23ff00a0&include_prereleases&label=version&sort=semver&style=flat-square"></a>
+    <a href="https://github.com/CodeCrowCorp/infinibuild-api"><img src="https://img.shields.io/github/v/release/CodeCrowCorp/infinibuild-api?color=%23ff00a0&include_prereleases&label=version&sort=semver"></a>
     &nbsp;
-    <a href="https://github.com/CodeCrowCorp/mvp-website"><img src="https://img.shields.io/badge/built_with-Svelte-FF3E00.svg?style=flat-square"></a>
+    <a href="https://github.com/CodeCrowCorp/infinibuild-api"><img src="https://img.shields.io/badge/built_with-rust-000000.svg"></a>
     &nbsp;
-	<a href="https://github.com/CodeCrowCorp/mvp-website/actions"><img src="https://img.shields.io/github/workflow/status/CodeCrowCorp/mvp-website/production.yml?style=flat-square"></a>
+    <a href="https://github.com/CodeCrowCorp/infinibuild-api/actions"><img src="https://github.com/CodeCrowCorp/infinibuild-api/actions/workflows/production.yml/badge.svg"></a>
     &nbsp;
-    <a href="https://github.com/CodeCrowCorp/mvp-website/license.md"><img src="https://img.shields.io/badge/license-MIT-00bfff.svg?style=flat-square"></a>
+    <a href="https://about.codecov.io/"><img src="https://codecov.io/gh/CodeCrowCorp/infinibuild-api/branch/master/graph/badge.svg"></a>
+    &nbsp;
+    <a href="https://dependabot.com/"><img src="https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot"></a>
+    &nbsp;
 </p>
 
 <p align="center">
-	<a href="https://discord.gg/codecrow"><img src="https://img.shields.io/discord/766681806463303680?label=discord&style=flat-square&color=5a66f6"></a>
+    <a href="https://github.com/CodeCrowCorp/infinibuild-api/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-GPL3.0-00bfff.svg"></a>
+    &nbsp;
+	<a href="https://discord.gg/codecrow"><img src="https://img.shields.io/discord/766681806463303680?label=discord&color=5a66f6"></a>
 	&nbsp;
-  <a href="https://twitter.com/CodeCrowCorp"><img src="https://img.shields.io/badge/twitter-follow_us-1d9bf0.svg?style=flat-square"></a>
-  &nbsp;
+    <a href="https://twitter.com/CodeCrowCorp"><img src="https://img.shields.io/badge/twitter-follow_us-1d9bf0.svg"></a>
+    &nbsp;
 </p>
 
 <br>
