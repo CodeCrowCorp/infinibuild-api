@@ -1,4 +1,4 @@
-name: test-and-preview.yml
+name: test-and-deploy.yml
 
 on:
   push:
