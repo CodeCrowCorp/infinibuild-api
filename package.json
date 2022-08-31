@@ -1,11 +1,12 @@
 {
-	"private": true,
-	"version": "0.0.0",
-	"scripts": {
-		"deploy": "wrangler publish src/lib.rs",
-		"dev": "wrangler dev src/lib.rs --local"
-	},
-	"devDependencies": {
-		"wrangler": "^2.0.0"
-	}
+    "private": true,
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "wrangler dev src/lib.rs --local",
+        "deploy": "wrangler publish src/lib.rs",
+        "deploy-prod": "wrangler publish --env production"
+    },
+    "devDependencies": {
+        "wrangler": "^2.0.0"
+    }
 }

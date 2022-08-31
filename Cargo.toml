@@ -1,7 +1,7 @@
 [package]
-name = "todo-worker"
-version = "0.0.0"
-edition = "2018"
+name = "infinibuild-api"
+version = "0.0.1"
+edition = "2022"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

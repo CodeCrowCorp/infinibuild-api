@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - dev
-      - main
   workflow_dispatch:
 
 jobs:
@@ -33,3 +32,6 @@ jobs:
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
+        env:
+          WORKERS_RS_VERSION: ${{ secrets.WORKERS_RS_VERSION }}
+          ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
