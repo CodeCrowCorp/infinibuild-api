@@ -13,7 +13,6 @@ permissions:
 jobs:
   deploy:
     name: Deploy to Cloudflare Workers
-    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
