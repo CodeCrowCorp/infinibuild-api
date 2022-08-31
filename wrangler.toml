@@ -8,6 +8,9 @@ compatibility_date = "2022-01-20"
 WORKERS_RS_VERSION = "0.0.10"
 ENVIRONMENT = "dev"
 
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
 [env.production]
 name = "infinibuild-api"
 route = "api.infini.build"
