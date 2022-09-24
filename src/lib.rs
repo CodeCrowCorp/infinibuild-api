@@ -2,6 +2,7 @@ use serde_json::json;
 use worker::*;
 
 mod utils;
+mod r2utils;
 
 fn log_request(req: &Request) {
     console_log!(
@@ -30,6 +31,14 @@ pub async fn main(req: Request, env: Env, _ctx: worker::Context) -> Result<Respo
     // Environment bindings like KV Stores, Durable Objects, Secrets, and Variables.
     router
         .get("/", |_, _| Response::ok("Hello from Workers!"))
+        .post_async("/take/build-files", |mut req, _| async move {
+            let body = req.text().await?;
+            Response::ok(body)
+        })
+        .post_async("/give/build-files/:id", |mut req, _| async move {
+            let body = req.text().await?;
+            Response::ok(body)
+        })
         .post_async("/form/:field", |mut req, ctx| async move {
             if let Some(name) = ctx.param("field") {
                 let form = req.form_data().await?;
