@@ -4,14 +4,22 @@ route = "dev.api.infini.build"
 main = "build/worker/shim.mjs"
 compatibility_date = "2022-01-20"
 
+#[[r2_buckets]]
+#binding = "DEV_BUCKET"
+#bucket_name = "dev-infinibuild"
+
 [vars]
-WORKERS_RS_VERSION = "0.0.10"
+WORKERS_RS_VERSION = "0.0.11"
 ENVIRONMENT = "dev"
 
 [build]
-command = "cargo install -q worker-build && worker-build --release"
+command = "cargo install -q --git https://github.com/cloudflare/workers-rs && worker-build"
 
 [env.production]
 name = "infinibuild-api"
 route = "api.infini.build"
-vars = { WORKERS_RS_VERSION = "0.0.10", ENVIRONMENT = "production" }
+vars = { WORKERS_RS_VERSION = "0.0.11", ENVIRONMENT = "production" }
+
+#[[r2_buckets]]
+#binding = "PROD_BUCKET"
+#bucket_name = "infinibuild"
