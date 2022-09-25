@@ -17,12 +17,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Install cargo
-        run: curl https://sh.rustup.rs -sSf | sh -s -- -y
-
+        
       - name: Publish
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: CodeCrowCorp/wrangler-rs-action@0.0.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: publish --env ${{ secrets.ENVIRONMENT }}
