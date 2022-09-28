@@ -13,7 +13,7 @@ WORKERS_RS_VERSION = "0.0.11"
 ENVIRONMENT = "dev"
 
 [build]
-command = "cargo install -q --git https://github.com/cloudflare/workers-rs && cargo install worker-build && worker-build"
+command = "cargo install -q --git https://github.com/cloudflare/workers-rs && worker-build"
 
 [env.production]
 name = "infinibuild-api"
