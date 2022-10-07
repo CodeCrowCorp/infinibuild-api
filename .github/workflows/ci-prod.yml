@@ -1,4 +1,4 @@
-name: deploy-and-release.yml
+name: ci-prod.yml
 
 on:
   push:
@@ -39,10 +39,9 @@ jobs:
       - name: Publish
         uses: CodeCrowCorp/wrangler-rs-action@0.0.1
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: publish --env ${{ secrets.ENVIRONMENT }}
-        env:
-          WORKERS_RS_VERSION: ${{ secrets.WORKERS_RS_VERSION }}
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            command: publish --env production
 
   create-tag:
     name: Create Tag

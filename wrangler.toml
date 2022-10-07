@@ -10,7 +10,6 @@ compatibility_date = "2022-01-20"
 
 [vars]
 WORKERS_RS_VERSION = "0.0.11"
-ENVIRONMENT = "dev"
 
 [build]
 command = "cargo install -q --git https://github.com/cloudflare/workers-rs && worker-build"
@@ -18,7 +17,7 @@ command = "cargo install -q --git https://github.com/cloudflare/workers-rs && wo
 [env.production]
 name = "infinibuild-api"
 route = "api.infini.build"
-vars = { WORKERS_RS_VERSION = "0.0.11", ENVIRONMENT = "production" }
+vars = { WORKERS_RS_VERSION = "0.0.11" }
 
 #[[r2_buckets]]
 #binding = "PROD_BUCKET"
