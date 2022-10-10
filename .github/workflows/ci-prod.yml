@@ -1,4 +1,4 @@
-name: deploy-and-release.yml
+name: ci-prod.yml
 
 on:
   push:
@@ -11,8 +11,9 @@ permissions:
   deployments: write
 
 jobs:
-  deploy:
-    name: Deploy to Cloudflare Workers
+
+  test:
+    name: Test Cloudflare Workers
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,13 +22,26 @@ jobs:
       - name: Install cargo
         run: curl https://sh.rustup.rs -sSf | sh -s -- -y
 
+      - name: Build
+        run: cargo build --verbose
+        
+      - name: Run tests
+        run: cargo test --verbose
+
+  deploy:
+    name: Deploy to Cloudflare Workers
+    runs-on: ubuntu-latest
+    needs: [test]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
       - name: Publish
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: CodeCrowCorp/wrangler-rs-action@0.0.1
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: publish --env ${{ secrets.ENVIRONMENT }}
-        env:
-          WORKERS_RS_VERSION: ${{ secrets.WORKERS_RS_VERSION }}
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            command: publish --env production
 
   create-tag:
     name: Create Tag
