@@ -11,7 +11,7 @@
     &nbsp;
     <a href="https://github.com/CodeCrowCorp/infinibuild-api"><img src="https://img.shields.io/badge/built_with-rust-000000.svg"></a>
     &nbsp;
-    <a href="https://github.com/CodeCrowCorp/infinibuild-api/actions"><img src="https://github.com/CodeCrowCorp/infinibuild-api/actions/workflows/test-and-deploy.yml/badge.svg"></a>
+    <a href="https://github.com/CodeCrowCorp/infinibuild-api/actions"><img src="https://github.com/CodeCrowCorp/infinibuild-api/actions/workflows/ci-prod.yml/badge.svg"></a>
     &nbsp;
     <a href="https://about.codecov.io/"><img src="https://codecov.io/gh/CodeCrowCorp/infinibuild-api/branch/main/graph/badge.svg"></a>
     &nbsp;
